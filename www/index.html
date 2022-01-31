@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>BLE-Reminder-App</title>
+        <meta name="author" content="Marina Hornung">
+		<meta name="description" content="A BLE-Reminder-App.">
+		<link href="css/index.css" rel="stylesheet">
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+		<script src="js/index.js"></script>
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    </head>
+    <body onload="onload()">
+		<div data-role="page">
+			<div data-role="header" id="divHeader">
+				<button id="btnBack">back</button>
+				<h3 id="title">BLE-Reminder</h3>
+			</div>
+			<div id="divMain" data-role="main" class="ui-content">
+				<table id="mindTable"></table>
+				<input id="text" value="" placeholder="Remind me to...">
+				<p id="date"><label>Date: </label><input type="date" id="datepicker"></p>
+				<p id="time"><label>Time: </label><input type="time" id="timepicker"></p>
+				<button id="btnSave">Save</button>
+				<button id="btnNew">+</button>
+				<i id="textOutput" class="zmdi zmdi-bluetooth-search zmd-3x"></i>
+			</div>
+			<button id="btnTest">Test</button>
+			<dialog id="dialogWindow">
+				<h3 id="_h3"></h3>
+				<button id="btnClose">Close</button>
+			</dialog>
+		</div>
+        <script type="text/javascript" src="cordova.js"></script>
+    </body>
+</html>
